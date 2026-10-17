@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room Booking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            font-family:Arial, sans-serif;
+            background:#eafaf7;
+        }
+
+        .booking-container{
+            max-width:500px;
+            background:#ffffff;
+            margin:80px auto;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .booking-container h2{
+            text-align:center;
+            color:#1abc9c;
+            margin-bottom:20px;
+        }
+
+        label{
+            font-weight:bold;
+            color:#2c3e50;
+            display:block;
+            margin-top:15px;
+        }
+
+        input, select{
+            width:100%;
+            padding:12px;
+            margin-top:6px;
+            border-radius:8px;
+            border:1px solid #ccc;
+            font-size:14px;
+        }
+
+        button{
+            width:100%;
+            margin-top:25px;
+            padding:14px;
+            background:#1abc9c;
+            color:white;
+            border:none;
+            border-radius:10px;
+            font-size:16px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        button:hover{
+            background:#17a589;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="booking-container">
+    <h2>Room Booking</h2>
+
+    <form action="confirmation.html" method="get">
+
+        <label>Full Name</label>
+        <input type="text" name="name" placeholder="Enter your name" pattern="[A-Za-z ]+" required>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter your email" required>
+
+        <label>Select Room</label>
+        <select name="room">
+            <option>Deluxe Room - ₹3000</option>
+            <option>Super Deluxe Room - ₹4500</option>
+            <option>Suite Room - ₹6000</option>
+        </select>
+
+        <label>Check-In Date</label>
+        <input type="date" name="checkin" required>
+
+        <label>Check-Out Date</label>
+        <input type="date" name="checkout" required>
+
+        <button type="submit">Confirm Booking</button>
+    </form>
+</div>
+
+</body>
+</html>
